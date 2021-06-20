@@ -22,10 +22,15 @@ $('currentDay').html(rightNow);
 
 $(document).ready(function () {
     $('.saveBtn').on('click', function () {       
-        var text = $(this).siblings(".description").val();
-        var time = $(this).parent().attr('id');
-        localStorage.setItem(time, text);
+        var textInput = $(this).siblings(".description").val();
+        var timeInput = $(this).parent().attr('id');
+        localStorage.setItem(textInput, timeInput);
     })
+
+        
+
+
+
 
 //  local storage
 $('#hour9.description').val(localStorage.getItem('hour9'));
