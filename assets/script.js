@@ -41,5 +41,5 @@ function displayTime() {
 
 
 
-
+// activates the timer that is contained in the header
   setInterval(displayTime, 1000);
