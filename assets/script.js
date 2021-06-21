@@ -19,7 +19,7 @@ var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
 $('#currentDay').html(rightNow);
 
 
-
+// Save buttoin for each time block
 $(document).ready(function () {
     $('.saveBtn').on('click', function () {       
         var textInput = $(this).siblings(".description").val();
@@ -27,6 +27,7 @@ $(document).ready(function () {
         localStorage.setItem(textInput, timeInput);
     })
 
+      // each timeblock is color coded to indicate whether it is in the past , prsent, or future
      function timeRecorder() {
        var currentTime = moment().hour();
        $('.time-period-one').each(function () {
@@ -79,8 +80,10 @@ function displayTime() {
 // activates the timer that is contained in the header
   setInterval(displayTime, 1000);
 
-// if(localStorage.getItem('email') !==null) {
-//   console.log('Email address exists');
-// } else {
-//   console.log('Email address not found');
-// }
+
+  // testing local storage however not sure if its working
+if(localStorage.getItem('email') !==null) {
+  console.log('Email address exists');
+} else {
+  console.log('Email address not found');
+}
