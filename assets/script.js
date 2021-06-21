@@ -48,8 +48,7 @@ $(document).ready(function () {
           $(this).addClass('present');
         }
 
-       })
-       
+       })       
 
      }   
 
@@ -77,24 +76,11 @@ function displayTime() {
     timeDisplayEl.text(rightNow);
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // activates the timer that is contained in the header
   setInterval(displayTime, 1000);
+
+if(localStorage.getItem('email') !==null) {
+  console.log('Email address exists');
+} else {
+  console.log('Email address not found');
+}
