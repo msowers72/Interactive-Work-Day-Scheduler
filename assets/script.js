@@ -38,13 +38,14 @@ $(document).ready(function () {
           $(this).removeClass('present');
 
         } else if (currentTime === timePeriod) {
-          $(this).addClass('past');
-          $(this).removeClass('future');
+          $(this).rmoveClass('past');
+          $(this).addClass('future');
           $(this).removeClass('present');
+
         } else {
-          $(this).addClass('past');
+          $(this).removeClass('past');
           $(this).removeClass('future');
-          $(this).removeClass('present');
+          $(this).addClass('present');
         }
 
        })
@@ -69,10 +70,6 @@ $('#hour17.description').val(localStorage.getItem('hour17'));
 timeRecorder();
 
 })
-
-
-
-
 
 // Display the time
 function displayTime() {
