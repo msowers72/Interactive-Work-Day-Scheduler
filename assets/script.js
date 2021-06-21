@@ -79,8 +79,8 @@ function displayTime() {
 // activates the timer that is contained in the header
   setInterval(displayTime, 1000);
 
-if(localStorage.getItem('email') !==null) {
-  console.log('Email address exists');
-} else {
-  console.log('Email address not found');
-}
+// if(localStorage.getItem('email') !==null) {
+//   console.log('Email address exists');
+// } else {
+//   console.log('Email address not found');
+// }
