@@ -27,7 +27,12 @@ $(document).ready(function () {
         localStorage.setItem(textInput, timeInput);
     })
 
-        
+     function timeRecorder() {
+       var currentTime = moment().hour();
+       $('.time-period-one').each(function () {
+         var timePeriod = parsInt($(this).attr('id').split('hour')[1]);
+       })
+     }   
 
 
 
