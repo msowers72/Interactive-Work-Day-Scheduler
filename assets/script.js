@@ -16,7 +16,7 @@ THEN the saved events persist*/
 // DOM elements
 var timeDisplayEl = $('#time-display');
 var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-$('currentDay').html(rightNow);
+$('#currentDay').html(rightNow);
 
 
 
@@ -30,8 +30,26 @@ $(document).ready(function () {
      function timeRecorder() {
        var currentTime = moment().hour();
        $('.time-period-one').each(function () {
-         var timePeriod = parsInt($(this).attr('id').split('hour')[1]);
+         var timePeriod = parseInt($(this).attr('id').split('hour')[1]);
+         
+        if (currentTime < timePeriod) {
+          $(this).addClass('past');
+          $(this).removeClass('future');
+          $(this).removeClass('present');
+
+        } else if (currentTime === timePeriod) {
+          $(this).addClass('past');
+          $(this).removeClass('future');
+          $(this).removeClass('present');
+        } else {
+          $(this).addClass('past');
+          $(this).removeClass('future');
+          $(this).removeClass('present');
+        }
+
        })
+       
+
      }   
 
 
@@ -48,6 +66,7 @@ $('#hour15.description').val(localStorage.getItem('hour15'));
 $('#hour16.description').val(localStorage.getItem('hour16'));
 $('#hour17.description').val(localStorage.getItem('hour17'));
 
+timeRecorder();
 
 })
 
