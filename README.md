@@ -1,5 +1,5 @@
-# Interactive-Work-Day-Scheduler
-My Task:
+## Interactive-Work-Day-Scheduler
+## My Task:
 Modify starter code and create a simple calendar applciation that allows the user to save events for each hour of the day.
 
 ## User Story
