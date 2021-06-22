@@ -1,6 +1,6 @@
 ## Interactive-Work-Day-Scheduler
 ## My Task:
-Modify starter code and create a simple calendar applciation that allows the user to save events for each hour of the day.
+Modify starter code and create a simple calendar applciation that allows the user to save events for each hour of the work-day.
 
 ## User Story
 In today's fast past business world proper organization and planning is essential for success. This simple calendar application will aid you in planing out your daily task and effectively managing your time.
