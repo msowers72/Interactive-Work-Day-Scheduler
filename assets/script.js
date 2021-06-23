@@ -24,7 +24,9 @@ $(document).ready(function () {
     $('.saveBtn').on('click', function () {       
         var textInput = $(this).siblings(".description").val();
         var timeInput = $(this).parent().attr('id');
+        console.log(textInput)        
         localStorage.setItem(textInput, timeInput);
+        console.log("hear")
     })
 
       // each timeblock is color coded to indicate whether it is in the past , prsent, or future
@@ -52,9 +54,6 @@ $(document).ready(function () {
        })       
 
      }   
-
-
-
 
 //  local storage
 $('#hour9 .description').val(localStorage.getItem('hour9'));
