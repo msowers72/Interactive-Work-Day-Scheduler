@@ -19,14 +19,14 @@ var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
 $('#currentDay').html(rightNow);
 
 
-// Save buttoin for each time block
+// Save buttion for each time block
 $(document).ready(function () {
     $('.saveBtn').on('click', function () {       
-        var textInput = $(this).siblings(".description").val();
-        var timeInput = $(this).parent().attr('id');
+        var textInput = $(this).siblings(".time-period-one").val();
+        var timeInput = $(this).parent().attr('.hour');
         console.log(textInput)        
-        localStorage.setItem(textInput, timeInput);
-        console.log("hear")
+        localStorage.setItem('.time-period-one', '.hour', JSON.stringify(textInput, timeInput));
+        console.log('hear')
     })
 
       // each timeblock is color coded to indicate whether it is in the past , prsent, or future
@@ -56,15 +56,15 @@ $(document).ready(function () {
      }   
 
 //  local storage
-$('#hour9 .description').val(localStorage.getItem('hour9'));
-$('#hour10 .description').val(localStorage.getItem('hour10'));
-$('#hour11 .description').val(localStorage.getItem('hour11'));
-$('#hour12 .description').val(localStorage.getItem('hour12'));
-$('#hour13 .description').val(localStorage.getItem('hour13'));
-$('#hour14 .description').val(localStorage.getItem('hour14'));
-$('#hour15 .description').val(localStorage.getItem('hour15'));
-$('#hour16 .description').val(localStorage.getItem('hour16'));
-$('#hour17 .description').val(localStorage.getItem('hour17'));
+$('#hour9 .time-period-one').val(localStorage.getItem('hour9'));
+$('#hour10 .time-period-one').val(localStorage.getItem('hour10'));
+$('#hour11 .time-period-one').val(localStorage.getItem('hour11'));
+$('#hour12 .time-period-one').val(localStorage.getItem('hour12'));
+$('#hour13 .time-period-one').val(localStorage.getItem('hour13'));
+$('#hour14 .time-period-one').val(localStorage.getItem('hour14'));
+$('#hour15 .time-period-one').val(localStorage.getItem('hour15'));
+$('#hour16 .time-period-one').val(localStorage.getItem('hour16'));
+$('#hour17 .time-period-one').val(localStorage.getItem('hour17'));
 
 timeRecorder();
 
