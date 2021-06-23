@@ -24,6 +24,7 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ![](assets\images\WorkDaySchedulerScreenShot.PNG)
+![](assets\05-third-party-apis-homework-demo.gif)
 ```
 
 
