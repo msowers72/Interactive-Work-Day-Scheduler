@@ -23,7 +23,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
-![](./assets\images\download.png)
+![](C:\Users\Mike\Desktop\bootcamp\Interactive-Work-Day-Scheduler\assets\images\download.png)
 
 
 
