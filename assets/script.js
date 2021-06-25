@@ -22,11 +22,13 @@ $('#currentDay').html(rightNow);
 // Save buttion for each time block
 $(document).ready(function () {
     $('.saveBtn').on('click', function () {       
-        var textInput = $(this).siblings(".time-period-one").val();
-        var timeInput = $(this).parent().attr('.hour');
+        var textInput = $(this).siblings('.col-md-10').val() 
+        //.siblings(".time-period-one").val();
+        var timeInput = $(this).parent().attr('id')
+        // .parent().attr('.hour');
         console.log(textInput)        
-        localStorage.setItem('.time-period-one', '.hour', JSON.stringify(textInput, timeInput));
-        console.log('hear')
+        localStorage.setItem(timeInput, JSON.stringify(textInput));
+        console.log(timeInput)
     })
 
       // each timeblock is color coded to indicate whether it is in the past , prsent, or future
@@ -41,7 +43,7 @@ $(document).ready(function () {
           $(this).removeClass('present');
 
         } else if (currentTime === timePeriod) {
-          $(this).rmoveClass('past');
+          $(this).removeClass('past');
           $(this).addClass('future');
           $(this).removeClass('present');
 
@@ -56,15 +58,15 @@ $(document).ready(function () {
      }   
 
 //  local storage
-$('#hour9 .time-period-one').val(localStorage.getItem('hour9'));
-$('#hour10 .time-period-one').val(localStorage.getItem('hour10'));
-$('#hour11 .time-period-one').val(localStorage.getItem('hour11'));
-$('#hour12 .time-period-one').val(localStorage.getItem('hour12'));
-$('#hour13 .time-period-one').val(localStorage.getItem('hour13'));
-$('#hour14 .time-period-one').val(localStorage.getItem('hour14'));
-$('#hour15 .time-period-one').val(localStorage.getItem('hour15'));
-$('#hour16 .time-period-one').val(localStorage.getItem('hour16'));
-$('#hour17 .time-period-one').val(localStorage.getItem('hour17'));
+$('#hour9 .col-md-10').val(JSON.parse(localStorage.getItem('hour9')));
+$('#hour10 .col-md-10').val(JSON.parse(localStorage.getItem('hour10')));
+$('#hour11 .col-md-10').val(JSON.parse(localStorage.getItem('hour11')));
+$('#hour12 .col-md-10').val(JSON.parse(localStorage.getItem('hour12')));
+$('#hour13 .col-md-10').val(JSON.parse(localStorage.getItem('hour13')));
+$('#hour14 .col-md-10').val(JSON.parse(localStorage.getItem('hour14')));
+$('#hour15 .col-md-10').val(JSON.parse(localStorage.getItem('hour15')));
+$('#hour16 .col-md-10').val(JSON.parse(localStorage.getItem('hour16')));
+$('#hour17 .col-md-10').val(JSON.parse(localStorage.getItem('hour17')));
 
 timeRecorder();
 
